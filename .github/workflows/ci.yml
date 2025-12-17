@@ -15,5 +15,6 @@ jobs:
           distribution: 'zulu'
           java-version: '17'
       - run: ./gradlew assemble
-      - run: ./gradlew ktlintCheck 
+      - run: ./gradlew ktlintCheck
       - uses: ./.github/workflows/reportLintResults
+      - run: ./gradlew test
